@@ -5,9 +5,9 @@ class Solution:
 
         while l <= r:
             m = l + ((r - l) // 2)  # (l + r) // 2 can lead to overflow
-            if nums[m] > target:
+            if nums[m] > target: # on the left side
                 r = m - 1
-            elif nums[m] < target:
+            elif nums[m] < target: # on the right side 
                 l = m + 1
             else:
                 return m

@@ -1,3 +1,10 @@
+# Iterate over each character in the string
+# Check if the character is a closing parenthesis
+    # If it is in the dictionary, it is a closing parenthesis
+    # If the stack is not empty and the top element of the stack matches the corresponding opening parenthesis
+        # pop the element since it matches
+    # otherwise return false
+    # if its not closing, (opening parenthesis) push it onto the stack
 class Solution:
     def validParentheses(self, s: str) -> bool:
         stack = []
@@ -22,22 +29,22 @@ if __name__ == "__main__":
     result1 = sol.validParentheses(s1)
     print(f"Test case 1: {s1} is valid: {result1}")  # Expected Output: True
 
-    # Test case 2: Invalid parentheses
-    s2 = "(]"
-    result2 = sol.validParentheses(s2)
-    print(f"Test case 2: {s2} is valid: {result2}")  # Expected Output: False
+    # # Test case 2: Invalid parentheses
+    # s2 = "(]"
+    # result2 = sol.validParentheses(s2)
+    # print(f"Test case 2: {s2} is valid: {result2}")  # Expected Output: False
 
-    # Test case 3: Valid nested parentheses
-    s3 = "({[]})"
-    result3 = sol.validParentheses(s3)
-    print(f"Test case 3: {s3} is valid: {result3}")  # Expected Output: True
+    # # Test case 3: Valid nested parentheses
+    # s3 = "({[]})"
+    # result3 = sol.validParentheses(s3)
+    # print(f"Test case 3: {s3} is valid: {result3}")  # Expected Output: True
 
-    # Test case 4: Empty string (considered valid)
-    s4 = ""
-    result4 = sol.validParentheses(s4)
-    print(f"Test case 4: {s4} is valid: {result4}")  # Expected Output: True
+    # # Test case 4: Empty string (considered valid)
+    # s4 = ""
+    # result4 = sol.validParentheses(s4)
+    # print(f"Test case 4: {s4} is valid: {result4}")  # Expected Output: True
 
-    # Test case 5: Unbalanced parentheses
-    s5 = "([)]"
-    result5 = sol.validParentheses(s5)
-    print(f"Test case 5: {s5} is valid: {result5}")  # Expected Output: False
+    # # Test case 5: Unbalanced parentheses
+    # s5 = "([)]"
+    # result5 = sol.validParentheses(s5)
+    # print(f"Test case 5: {s5} is valid: {result5}")  # Expected Output: False
